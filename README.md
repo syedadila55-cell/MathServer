@@ -43,12 +43,47 @@ Render the result to the HTML template.
 Publish the website in Localhost.
 
 ## PROGRAM:
+~~~
+<html>
+<head>
+    <title>GST Calculator</title>
+</head>
+<body>
 
+    <h2>GST Bill Calculator</h2>
+
+    Price: 
+    <input type="number" id="price"><br><br>
+
+    GST %: 
+    <input type="number" id="gst"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var price = document.getElementById("price").value;
+            var gst = document.getElementById("gst").value;
+
+            var total = Number(price) + (Number(price) * Number(gst) / 100);
+
+            document.getElementById("result").innerHTML =
+                "Total Bill Amount = ₹ " + total;
+        }
+    </script>
+
+</body>
+</html>
+~~~
 
 ## OUTPUT - SERVER SIDE:
+<img width="360" height="218" alt="Screenshot 2026-02-26 153530" src="https://github.com/user-attachments/assets/5efe75f5-fff8-4ac6-b56a-d5ac39789140" />
 
 
 ## OUTPUT - WEBPAGE:
+<img width="330" height="299" alt="Screenshot 2026-02-26 153615" src="https://github.com/user-attachments/assets/cd6aff69-cb90-4819-a240-a0b16022ed81" />
 
 
 ## RESULT:
