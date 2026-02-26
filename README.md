@@ -43,13 +43,48 @@ Render the result to the HTML template.
 Publish the website in Localhost.
 
 ## PROGRAM:
+~~~
+<html>
+<head>
+    <title>GST Calculator</title>
+</head>
+<body>
 
+    <h2>GST Bill Calculator</h2>
+
+    Price: 
+    <input type="number" id="price"><br><br>
+
+    GST %: 
+    <input type="number" id="gst"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var price = document.getElementById("price").value;
+            var gst = document.getElementById("gst").value;
+
+            var total = Number(price) + (Number(price) * Number(gst) / 100);
+
+            document.getElementById("result").innerHTML =
+                "Total Bill Amount = ₹ " + total;
+        }
+    </script>
+
+</body>
+</html>
+~~~
 
 ## OUTPUT - SERVER SIDE:
+<img width="360" height="218" alt="Screenshot 2026-02-26 153530" src="https://github.com/user-attachments/assets/4e8f6654-681f-44f7-9e5a-36533249ded3" />
 
 
 ## OUTPUT - WEBPAGE:
 
+<img width="330" height="299" alt="Screenshot 2026-02-26 153615" src="https://github.com/user-attachments/assets/98a53d0a-2d76-4216-97c3-dbbdbeefd701" />
 
 ## RESULT:
 The a web page to calculate total bill amount with GST from price and GST percentage using server-side scripts is created successfully.
