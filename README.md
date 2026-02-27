@@ -1,5 +1,5 @@
 # Ex.04 Design a Website for Server Side Processing
-## Date:
+## Date:27-02-2026
 
 ## AIM:
 To create a web page to calculate total bill amount with GST from price and GST percentage using server-side scripts.
@@ -43,12 +43,48 @@ Render the result to the HTML template.
 Publish the website in Localhost.
 
 ## PROGRAM:
+~~~
 
+<html>
+<head>
+    <title>GST Calculator</title>
+</head>
+<body>
+
+    <h2>GST Bill Calculator</h2>
+
+    Price: 
+    <input type="number" id="price"><br><br>
+
+    GST %: 
+    <input type="number" id="gst"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var price = document.getElementById("price").value;
+            var gst = document.getElementById("gst").value;
+
+            var total = Number(price) + (Number(price) * Number(gst) / 100);
+
+            document.getElementById("result").innerHTML =
+                "Total Bill Amount = ₹ " + total;
+        }
+    </script>
+
+</body>
+</html>
+~~~
 
 ## OUTPUT - SERVER SIDE:
+<img width="360" height="218" alt="Screenshot 2026-02-26 153530" src="https://github.com/user-attachments/assets/65b46d10-e478-4d33-b261-1ccbbed43791" />
 
 
 ## OUTPUT - WEBPAGE:
+<img width="330" height="299" alt="Screenshot 2026-02-26 153615" src="https://github.com/user-attachments/assets/c5fd7c4f-8004-4987-8186-02e6af250ba7" />
 
 
 ## RESULT:
